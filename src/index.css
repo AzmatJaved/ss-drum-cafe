@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Caveat:wght@400;700&display=swap');
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Cinzel", serif;
+  --font-heading: "Space Grotesk", sans-serif;
+  --font-cursive: "Caveat", cursive;
+  
+  --color-brand-brown-dark: #0A0A0A;
+  --color-brand-brown-medium: #121212;
+  --color-brand-brown-light: #1A1A1A;
+  --color-brand-bronze: #D97706;
+  --color-brand-bronze-dark: rgba(255, 255, 255, 0.05);
+  --color-brand-red: #EF4444;
+  --color-brand-red-light: #F87171;
+  --color-brand-gold: #F59E0B;
+}
+
+@layer utilities {
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+}

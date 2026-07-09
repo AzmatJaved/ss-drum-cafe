@@ -1,0 +1,6 @@
+{
+  "name": "SS Drum Cafe",
+  "description": "Atmospheric, drum-themed café website featuring visual oil-barrel drum table selections, a live-synthesised music player, an interactive menus list, and a table pass/ticket generator.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
