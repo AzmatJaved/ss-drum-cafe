@@ -207,11 +207,11 @@ export default function MenuModal({ isOpen, onClose, onAddToCart }: MenuModalPro
 
                     <button
                       id={`add-to-cart-btn-${item.id}`}
-                      disabled
-                      className="mt-4.5 flex w-full items-center justify-center gap-2 rounded-none border border-white/5 bg-[#161616]/40 py-2.5 text-xs font-bold uppercase tracking-widest text-zinc-500 cursor-not-allowed"
+                      onClick={() => onAddToCart(item)}
+                      className="mt-4.5 flex w-full items-center justify-center gap-2 rounded-none border border-brand-gold/40 bg-brand-gold/10 py-2.5 text-xs font-bold uppercase tracking-widest text-brand-gold hover:bg-brand-gold hover:text-black transition-all duration-200"
                     >
-                      <ShoppingBag className="h-3.5 w-3.5 text-zinc-600" />
-                      Coming Soon
+                      <ShoppingBag className="h-3.5 w-3.5" />
+                      Add to cart
                     </button>
                   </div>
                 </div>
