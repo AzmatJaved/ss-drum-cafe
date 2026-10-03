@@ -4,9 +4,10 @@
  */
 
 import React, { useState, useMemo } from 'react';
-import { X, Search, Flame, Leaf, Coffee, Pizza, Sparkles, ShoppingBag } from 'lucide-react';
+import { X, Search, Flame, Leaf, Coffee, Pizza, Sparkles, ShoppingBag, FileText } from 'lucide-react';
 import { MENU_ITEMS } from '../data';
 import { MenuItem } from '../types';
+import menuPdfUrl from '../assets/SS Drum cafe Menu.pdf';
 
 interface MenuModalProps {
   isOpen: boolean;
@@ -58,13 +59,25 @@ export default function MenuModal({ isOpen, onClose, onAddToCart }: MenuModalPro
         </button>
 
         {/* Title */}
-        <div className="mb-6 flex flex-col items-start">
-          <span className="flex items-center gap-1.5 font-heading text-[10px] font-bold tracking-[0.25em] text-brand-gold uppercase">
-            <Sparkles className="h-3.5 w-3.5" /> Our Full Menu
-          </span>
-          <h2 className="font-display text-2xl md:text-3xl font-light tracking-tight text-white mt-1 uppercase">
-            SS DRUM <span className="italic font-serif text-brand-gold">Cafe</span>
-          </h2>
+        <div className="mb-6 flex flex-col items-start md:flex-row md:items-center md:justify-between md:gap-4 w-full">
+          <div className="flex flex-col items-start">
+            <span className="flex items-center gap-1.5 font-heading text-[10px] font-bold tracking-[0.25em] text-brand-gold uppercase">
+              <Sparkles className="h-3.5 w-3.5" /> Our Full Menu
+            </span>
+            <h2 className="font-display text-2xl md:text-3xl font-light tracking-tight text-white mt-1 uppercase">
+              SS DRUM <span className="italic font-serif text-brand-gold">Cafe</span>
+            </h2>
+          </div>
+
+          <a
+            href={menuPdfUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="mt-3 md:mt-0 inline-flex items-center gap-2 rounded-none border border-brand-gold/50 bg-brand-gold/10 px-3.5 py-2 text-[10px] font-bold uppercase tracking-[0.2em] text-brand-gold transition-all hover:bg-brand-gold hover:text-black"
+          >
+            <FileText className="h-3.5 w-3.5" />
+            View PDF Menu
+          </a>
         </div>
 
         {/* Search and Quick Filters */}
