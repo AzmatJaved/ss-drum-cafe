@@ -52,6 +52,10 @@ import { MENU_ITEMS } from './data';
 import { MenuItem, CartItem } from './types';
 
 export default function App() {
+  const whatsappNumber = '91911944149';
+  const whatsappMessage = encodeURIComponent('Hi SS Drum Cafe, I would like to know more about your cafe.');
+  const instagramUrl = 'https://www.instagram.com/ssdrum_cafe/';
+
   // Modal / Sidebar States
   const [isAudioOpen, setIsAudioOpen] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -754,8 +758,8 @@ export default function App() {
                 <div className="flex gap-3 justify-start md:justify-end">
                   {[
                     { icon: Facebook, href: '#', id: 'facebook-btn' },
-                    { icon: Instagram, href: '#', id: 'instagram-btn' },
-                    { icon: MessageCircle, href: '#', id: 'whatsapp-btn' }
+                    { icon: Instagram, href: instagramUrl, id: 'instagram-btn' },
+                    { icon: MessageCircle, href: `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`, id: 'whatsapp-btn' }
                   ].map((soc, i) => {
                     const Icon = soc.icon;
                     return (
@@ -766,6 +770,7 @@ export default function App() {
                         target="_blank"
                         rel="noreferrer"
                         className="flex h-9 w-9 items-center justify-center rounded-none border border-white/10 text-zinc-400 hover:bg-brand-gold hover:text-black hover:border-brand-gold transition-all duration-300"
+                        aria-label={soc.id === 'whatsapp-btn' ? 'Chat on WhatsApp' : undefined}
                       >
                         <Icon className="h-4.5 w-4.5" />
                       </a>
